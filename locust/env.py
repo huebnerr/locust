@@ -161,6 +161,12 @@ class Environment:
             master_port=master_port,
         )
 
+    def create_validation_runner(self) -> ValidationRunner:
+        """
+        Create a :class:`ValidationRunner <locust.runners.ValidationRunner>` instance for this Environment
+        """
+        return self._create_runner(ValidationRunner)
+
     def create_web_ui(
         self,
         host="",

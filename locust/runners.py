@@ -566,6 +566,14 @@ class LocalRunner(Runner):
             logger.warning(f"Unknown message type received: {msg_type}")
 
 
+class ValidationRunner(LocalRunner):
+    def __init__(self, environment) -> None:
+        """
+        :param environment: Environment instance
+        """
+        super().__init__(environment)
+
+
 class DistributedRunner(Runner):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)

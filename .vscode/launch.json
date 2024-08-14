@@ -22,6 +22,33 @@
             ],
             "console": "integratedTerminal",
             "gevent": true
+        },
+        {
+            "name": "Run locust (basic launch)",
+            "type": "python",
+            "request": "launch",
+            "module": "locust",
+            "args": [
+                "--version"
+            ],
+            "console": "integratedTerminal",
+            "gevent": true
+        },
+        {
+            "name": "Locust: 5 users, with specific config file",
+            "type": "python",
+            "request": "launch",
+            "module": "locust",
+            "args": [
+                "-f",
+                "/home/ambival/Projects/python/fortifylocust/suites/users/locustfile.py",
+                "--headless",
+                "--users=1",
+                "--config=/home/ambival/Projects/python/fortifylocust/locust.conf"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "/home/ambival/Projects/python/fortifylocust",
+            "gevent": true
         }
     ]
 }
